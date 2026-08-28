@@ -1,8 +1,8 @@
 # LEIS Constitution — Public Mirror / Veřejné zrcadlo
 
-This repository is a **public, integrity-verified mirror** of the canonical **LEIS Constitution v8.9** (*Resilient Federated Delivery Amendment*).
+This repository is a **public, integrity-verified mirror** of the canonical **LEIS Constitution v8.11** (*Implementation Purity Reunification Amendment*).
 
-Toto úložiště je **veřejné, integritně ověřené zrcadlo** kanonické **Ústavy LEIS v8.9**.
+Toto úložiště je **veřejné, integritně ověřené zrcadlo** kanonické **Ústavy LEIS v8.11**.
 
 ---
 
@@ -20,9 +20,25 @@ Toto úložiště je **veřejné, integritně ověřené zrcadlo** kanonické **
 
 ## Integrity / Integrita
 
-- File: `LEIS_Constitution_v8.9_Canonical.md` — 64,661 bytes
-- SHA-256: `99abcd82fffb7c7e6a1c6ac9fed3b82bbb0771c7326df83cd2ca84d6bcfe55d9`
+- File: `LEIS_Constitution_v8.11_Canonical.md` — 68,630 bytes
+- SHA-256: `60429796c7ec78a3cf6a2276ad404c07a8ce144043d9689851492d467c87a164`
+- Superseded versions are **retained, never deleted** (**XIV.6** *Deprecation Without Destruction*):
+  `history/LEIS_Constitution_v8.9_Canonical.md` — 64,661 bytes,
+  SHA-256 `99abcd82fffb7c7e6a1c6ac9fed3b82bbb0771c7326df83cd2ca84d6bcfe55d9`.
 - This copy is byte-identical to the source held in the live LEIS Vault and the founder's working tree. **Verify before relying on it.**
+
+## Version lineage / Linie verzí
+
+**v8.11** reunifies the canonical line that had forked between the v8.9 file and v8.10, and additively
+adds **XV.11 Implementation Purity**. Versions v8.0–v8.10 are retained as historical lineage and are
+not deleted (**XIV.6**). Earlier public copies of this mirror carried **v8.9**; that file now lives in
+`history/`.
+
+*v8.11 sjednocuje kanonickou linii, která se rozešla mezi souborem v8.9 a v8.10, a přidává
+**XV.11 Implementation Purity**. Verze v8.0–v8.10 zůstávají zachovány jako historická linie a nemažou
+se (XIV.6). Dřívější veřejné kopie tohoto zrcadla nesly v8.9; ten soubor je nyní v `history/`.*
+
+---
 
 ## What this document is — and is not (claims boundary) / Co tento dokument je a co není
 
