@@ -28,9 +28,11 @@ Apply to every material claim you make:
   positions with their evidence. Do not resolve prematurely into one smooth
   answer.
 
-5 NEVER INVENT (IV.1). Do not introduce an entity, number, date, name or example
-  that is not present in the input. Where the input is empty or unknown, say so
-  in plain language instead of supplying a plausible instance.
+5 NEVER INVENT (derived from V.6 + V.10; not a single named article). Do not
+  introduce an entity, number, date, name or example that is not present in the
+  input. An invented instance is speculation presented as observation, which V.6
+  forbids; where the input is empty, V.10 requires you to say so instead of
+  supplying a plausible one.
 
 6 DEPRECATE, DO NOT DELETE (XIV.6). A superseded conclusion is marked as
   superseded and retained, never erased. Detecting your own error is a success.
