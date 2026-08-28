@@ -160,6 +160,17 @@ tr:last-child td{border-bottom:0}
 .qr .lbl{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.09em;
   text-transform:uppercase;color:var(--accent);margin-bottom:5px}
 
+
+/* ---------- kam to vlozit ---------- */
+.kam{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2px;margin-top:24px}
+.nastroj{background:var(--surface);border:1px solid var(--line);padding:20px 24px}
+.nastroj h3{margin:0 0 4px;font-size:1.02rem;font-weight:600}
+.nastroj .kde{font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--accent);
+  margin:0 0 8px;word-break:break-word}
+.nastroj p{margin:0;font-size:.92rem;color:var(--muted);line-height:1.55}
+.nastroj code{font-family:"IBM Plex Mono",monospace;font-size:.85em;
+  background:var(--surface-2);padding:1px 4px}
+
 blockquote{margin:0;padding:0 0 0 22px;border-left:2px solid var(--accent);
   font-style:italic;color:var(--muted)}
 footer{margin-top:70px;border-top:1px solid var(--line);padding-top:24px;
@@ -351,6 +362,58 @@ LEIS: &lt;established&gt; | &lt;unknown&gt; | &lt;what would refute this&gt;</pr
       <p>Poslední řádek příkazu je na tom to podstatné. Model musí každou odpověď uzavřít
       shrnutím <em>co je doloženo | co zůstává neznámé | co by to vyvrátilo</em>. Když to
       přestane dělat, poznáte, že instrukce vypadla — a nemusíte to hádat.</p>
+    </div>
+  </section>
+
+
+  <section>
+    <p class="kicker">Kam to vložit</p>
+    <h2>Aby si to nástroj pamatoval i zítra</h2>
+    <div class="col">
+      <p>Vložení do jednoho chatu vydrží jen do konce sezení. Tohle jsou místa, odkud si to
+      nástroj přikládá <strong>sám ke každé odpovědi</strong>, dokud to nesmažete.</p>
+    </div>
+    <div class="kam">
+      <div class="nastroj">
+        <h3>GitHub Copilot — osobní</h3>
+        <p class="kde">github.com/copilot → profilový obrázek vlevo dole → Personal instructions</p>
+        <p>Vložit, uložit. Platí pro každou konverzaci na GitHubu a má ze všech nastavení
+        nejvyšší přednost.</p>
+      </div>
+      <div class="nastroj">
+        <h3>GitHub Copilot — pro repozitář</h3>
+        <p class="kde">.github/copilot-instructions.md</p>
+        <p>Soubor v repozitáři. Copilot ho čte při každém dotazu v jeho kontextu — hodí se,
+        když má pravidlo platit pro celý tým.</p>
+      </div>
+      <div class="nastroj">
+        <h3>ChatGPT</h3>
+        <p class="kde">Nastavení → Personalizace → Vlastní pokyny</p>
+        <p>Do pole „Jak má ChatGPT odpovídat". Delší verze se nemusí vejít — pak použijte
+        tu zkrácenou.</p>
+      </div>
+      <div class="nastroj">
+        <h3>Claude</h3>
+        <p class="kde">Projekt → Instrukce projektu · nebo Nastavení → Osobní preference</p>
+        <p>Instrukce projektu platí pro všechny konverzace v něm. V Claude Code stačí
+        soubor <code>CLAUDE.md</code> v adresáři.</p>
+      </div>
+      <div class="nastroj">
+        <h3>Gemini</h3>
+        <p class="kde">Nastavení → Uložené informace</p>
+        <p>Uloží se jako trvalý kontext, který si model bere ke každé odpovědi.</p>
+      </div>
+      <div class="nastroj">
+        <h3>Kdekoli jinde</h3>
+        <p class="kde">první zpráva v konverzaci</p>
+        <p>Když nástroj trvalé pokyny nemá, vložte příkaz jako úplně první zprávu. Platí
+        pak do konce toho sezení.</p>
+      </div>
+    </div>
+    <div class="col" style="margin-top:22px">
+      <p>Že se to chytilo, poznáte podle posledního řádku odpovědi — musí končit shrnutím
+      <em>co je doloženo | co zůstává neznámé | co by to vyvrátilo</em>. Když ten řádek
+      zmizí, instrukce vypadla.</p>
     </div>
   </section>
 
