@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ústava LEIS v8.11 — kanonický text a trvalý příkaz</title>
+<meta name="description" content="Kanonický text Ústavy LEIS v8.11 s otiskem k ověření, metoda v šesti bodech a trvalý příkaz, který si AI uloží a přikládá ke každé odpovědi.">
+<meta property="og:title" content="Ústava LEIS v8.11">
+<meta property="og:description" content="Kanonický text, otisk k ověření a trvalý příkaz pro AI.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#9878;</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+
+<style>
+:root{
+  --ink:#16191C;
+  --paper:#F1F3F1;
+  --surface:#FFFFFF;
+  --surface-2:#E3E8E4;
+  --line:#C9D3CC;
+  --line-soft:#DBE2DC;
+  --muted:#5A6862;
+  --accent:#2E6B5E;
+  --accent-soft:#DEEBE6;
+  --caution:#8A4B2E;
+  --caution-soft:#F6E7DF;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#E5EAE6;
+    --paper:#0E1210;
+    --surface:#161C19;
+    --surface-2:#1E2622;
+    --line:#2E3A34;
+    --line-soft:#232C27;
+    --muted:#94A49C;
+    --accent:#63B8A3;
+    --accent-soft:#12302A;
+    --caution:#D8916E;
+    --caution-soft:#332016;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EAE6;
+  --paper:#0E1210;
+  --surface:#161C19;
+  --surface-2:#1E2622;
+  --line:#2E3A34;
+  --line-soft:#232C27;
+  --muted:#94A49C;
+  --accent:#63B8A3;
+  --accent-soft:#12302A;
+  --caution:#D8916E;
+  --caution-soft:#332016;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif;font-size:17.5px;line-height:1.66;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px 100px}
+.col{max-width:66ch}
+h1,h2,.dek,.big{font-family:Newsreader,Georgia,serif}
+p{margin:0 0 18px}
+strong{font-weight:600}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+header{border-bottom:1px solid var(--line)}
+.head-in{max-width:960px;margin:0 auto;padding:60px 24px 44px;display:flex;flex-direction:column;gap:18px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--accent);display:flex;flex-wrap:wrap;gap:6px 20px}
+h1{font-size:clamp(2.4rem,6vw,3.8rem);line-height:1.02;margin:0;font-weight:600;letter-spacing:-.02em}
+.dek{font-size:1.3rem;line-height:1.45;color:var(--muted);margin:0;max-width:44ch;font-style:italic}
+
+section{margin-top:60px}
+h2{font-size:1.5rem;font-weight:600;letter-spacing:-.012em;margin:0 0 18px;line-height:1.2;
+  text-wrap:balance;max-width:28ch}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+
+/* zdroj */
+.source{background:var(--surface);border:1px solid var(--line);padding:0;margin-top:34px}
+.source-top{padding:26px 30px 22px;border-bottom:1px solid var(--line-soft)}
+.source-top .big{font-size:1.32rem;margin:0 0 6px;font-weight:600}
+.source-top p{margin:0;color:var(--muted);font-size:.97rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:0}
+.cell{padding:18px 30px;border-top:1px solid var(--line-soft)}
+.cell:not(:last-child){border-right:1px solid var(--line-soft)}
+.cell dt{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.cell dd{margin:0;font-variant-numeric:tabular-nums;font-size:1.02rem}
+.hash{padding:18px 30px;border-top:1px solid var(--line-soft);overflow-x:auto}
+.hash code{font-family:"IBM Plex Mono",monospace;font-size:.79rem;color:var(--ink);
+  word-break:break-all;display:block;line-height:1.7}
+
+/* metoda */
+.moves{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.move{display:grid;grid-template-columns:5.6rem 1fr;gap:24px;padding:20px 0;
+  border-bottom:1px solid var(--line-soft);align-items:baseline}
+.move-a{font-family:"IBM Plex Mono",monospace;font-size:.76rem;letter-spacing:.06em;
+  color:var(--accent);white-space:nowrap;padding-top:.2em}
+.move-b p{margin:0}
+.move-b .t{font-weight:600;display:block;margin-bottom:3px}
+
+/* kapitoly */
+.chaps{columns:2;column-gap:36px;font-size:.96rem}
+@media (max-width:640px){.chaps{columns:1}}
+.chap{break-inside:avoid;display:grid;grid-template-columns:2.6rem 1fr;gap:10px;
+  padding:6px 0;border-bottom:1px solid var(--line-soft)}
+.chap-n{font-family:"IBM Plex Mono",monospace;font-size:.76rem;color:var(--muted);padding-top:.28em}
+
+/* test */
+.steps{counter-reset:s;display:flex;flex-direction:column;gap:2px}
+.step{background:var(--surface);border:1px solid var(--line);padding:20px 26px;
+  display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start}
+.step::before{counter-increment:s;content:counter(s);font-family:"IBM Plex Mono",monospace;
+  font-size:.8rem;color:var(--accent);padding-top:.28em}
+.step h3{margin:0 0 5px;font-size:1.04rem;font-weight:600;font-family:"Source Serif 4",serif}
+.step p{margin:0;color:var(--muted);font-size:.96rem}
+
+/* varovani */
+.warn{background:var(--caution-soft);border:1px solid var(--caution);
+  border-left-width:4px;padding:24px 28px;margin-top:24px}
+.warn h3{margin:0 0 10px;font-size:1.06rem;font-weight:600}
+.warn p{margin:0 0 12px}
+.warn p:last-child{margin:0}
+.scroll{overflow-x:auto;margin-top:14px}
+table{border-collapse:collapse;width:100%;min-width:420px;font-size:.93rem}
+th{text-align:left;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;font-weight:500;color:var(--muted);padding:8px 14px 8px 0;
+  border-bottom:1px solid var(--caution)}
+td{padding:8px 14px 8px 0;border-bottom:1px solid var(--line-soft);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.mono{font-family:"IBM Plex Mono",monospace;font-size:.82rem;white-space:nowrap}
+
+
+/* ---------- trvaly prikaz ---------- */
+.boot{background:var(--surface);border:1px solid var(--line);margin-top:26px}
+.boot-h{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;
+  padding:16px 22px;border-bottom:1px solid var(--line-soft)}
+.boot-h h3{margin:0;font-size:1rem;font-weight:600}
+.boot-h .len{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--muted)}
+.boot pre{margin:0;padding:20px 22px;overflow-x:auto;font-family:"IBM Plex Mono",monospace;
+  font-size:.76rem;line-height:1.62;white-space:pre;color:var(--ink)}
+.cp{font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.08em;
+  text-transform:uppercase;background:var(--accent-soft);color:var(--accent);
+  border:1px solid var(--accent);padding:6px 12px;cursor:pointer;border-radius:0}
+.cp:hover{background:var(--accent);color:var(--surface)}
+.cp:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.qrs{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:22px;margin-top:26px}
+.qr{background:var(--surface);border:1px solid var(--line);padding:20px;text-align:center}
+.qr .box{max-width:170px;margin:0 auto 12px}
+.qr p{margin:0;font-size:.87rem;color:var(--muted);line-height:1.5}
+.qr .lbl{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+
+blockquote{margin:0;padding:0 0 0 22px;border-left:2px solid var(--accent);
+  font-style:italic;color:var(--muted)}
+footer{margin-top:70px;border-top:1px solid var(--line);padding-top:24px;
+  font-family:"IBM Plex Mono",monospace;font-size:.8rem;color:var(--muted);line-height:1.8}
+</style>
+</head>
+<body>
+
+
+<header>
+  <div class="head-in">
+    <div class="eyebrow"><span>Verze 8.11 — Canonical</span><span>27. 8. 2026</span><span>20 kapitol · 195 principů</span></div>
+    <h1>Ústava LEIS</h1>
+    <p class="dek">Soustava principů pro systém, který má uchovávat poznání a nelhat si přitom do vlastní evidence.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section style="margin-top:44px">
+    <div class="col">
+      <p>Tohle je stránka pro toho, kdo má ústavu <strong>vyzkoušet</strong> — přečíst ji,
+      ověřit, zpochybnit. Závazný je text na GitHubu; tady je jen to, co potřebujete vědět,
+      než ho otevřete.</p>
+    </div>
+
+    <div class="source">
+      <div class="source-top">
+        <p class="big"><a href="https://github.com/majpuzik/Leis">github.com/majpuzik/Leis</a></p>
+        <p>Veřejné zrcadlo kanonického textu. Soubor <code style="font-family:'IBM Plex Mono',monospace;font-size:.86em">LEIS_Constitution_v8.11_Canonical.md</code>.</p>
+      </div>
+      <dl class="grid">
+        <div class="cell"><dt>Velikost</dt><dd>68 630 B</dd></div>
+        <div class="cell"><dt>Kapitol</dt><dd>20</dd></div>
+        <div class="cell"><dt>Principů</dt><dd>195</dd></div>
+      </dl>
+      <div class="hash">
+        <dt style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">SHA-256 — ověřte, než se na text spolehnete</dt>
+        <code>60429796c7ec78a3cf6a2276ad404c07a8ce144043d9689851492d467c87a164</code>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Hranice tvrzení</p>
+    <h2>Co to je — a co to není</h2>
+    <div class="col">
+      <p>Ústava je <strong>normativní soustava principů</strong>, psaná konvencí MUST / SHOULD / MAY.
+      Popisuje, jak se systém pro uchování poznání <em>má</em> chovat.</p>
+      <p><strong>Není</strong> tvrzením, že popsané věci — autonomní přežití, sebe-rekonstruující se
+      semena, živá federovaná kryptografická síť, univerzální kognice nezávislá na substrátu —
+      jsou ověřená, funkční realita. To jsou <strong>normativní cíle, ne důkazy</strong>.</p>
+      <p>Tuhle hranici žádá ústava sama po sobě, v článcích <strong>V.6</strong> (důkaz před názorem)
+      a <strong>V.10</strong> (přiznaná nejistota). Aspirace se nesmí tiše slít s evidencí — ani
+      ve vlastním textu.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Metoda</p>
+    <h2>Šest pohybů, na kterých to celé stojí</h2>
+    <div class="col">
+      <p>Kdo nemá čas na 195 principů, tohle je jádro. Zbytek jsou většinou důsledky.</p>
+    </div>
+    <div class="moves">
+      <div class="move"><span class="move-a">V.6</span><div class="move-b">
+        <p><span class="t">Nikdy neslévej vrstvy tvrzení.</span>
+        Pozorování, měření, důkaz, odvození, výklad, názor, dohad, předpověď a hodnocení jsou
+        různé věci. Smí stát vedle sebe, nesmí splynout.</p></div></div>
+      <div class="move"><span class="move-a">V.10</span><div class="move-b">
+        <p><span class="t">Nevím je platná odpověď.</span>
+        Když důkaz nestačí, uchová se nejistota, místo aby se vyrobila jistota. Neznámé,
+        nedostatečné, rozporné a nízká důvěra jsou přípustné výsledky.</p></div></div>
+      <div class="move"><span class="move-a">V.13</span><div class="move-b">
+        <p><span class="t">U závěru se uchová, co by ho vyvrátilo.</span>
+        A hledá se to aktivně — i proti vlastním nejsilnějším závěrům, ne jen podpora.</p></div></div>
+      <div class="move"><span class="move-a">V.14</span><div class="move-b">
+        <p><span class="t">Rozpor je informace.</span>
+        Když si dva důvěryhodné zdroje odporují, obě verze se uchovají i s důkazy. Nesjednocuje se
+        to předčasně do jedné hladké odpovědi.</p></div></div>
+      <div class="move"><span class="move-a">IV.1</span><div class="move-b">
+        <p><span class="t">Význam má přednost před formou.</span>
+        Poškozená zpráva není ztracená, dokud je význam rekonstruovatelný. Symbol je dočasný,
+        význam prvotní.</p></div></div>
+      <div class="move"><span class="move-a">XIV.6</span><div class="move-b">
+        <p><span class="t">Co je překonané, se označí — nemaže.</span>
+        Vyvrácené se nahrazuje, ne odstraňuje. Proto v repozitáři vedle v8.11 leží i v8.9.</p></div></div>
+    </div>
+    <div class="col" style="margin-top:26px">
+      <blockquote>V.16 — „LEIS neuchovává přesvědčení. LEIS uchovává nejlépe ověřenou aproximaci
+      skutečnosti spolu s důkazy, nejistotou, původem a úvahou, která k ní vedla. LEIS neusiluje
+      o to mít pravdu; LEIS usiluje o to mýlit se méně."</blockquote>
+    </div>
+  </section>
+
+
+  <section>
+    <p class="kicker">Trvalý příkaz</p>
+    <h2>Jak přimět jakoukoli AI, aby podle ní kontrolovala pořád</h2>
+    <div class="col">
+      <p>Přečíst ústavu jednou nestačí — model ji zapomene s koncem sezení. Následující blok se
+      vkládá do <strong>trvalých instrukcí</strong>: „custom instructions“ u ChatGPT, pokyny
+      projektu u Claude, systémový prompt, nebo dlouhodobá paměť. Model si ho pak přikládá
+      ke každé odpovědi sám, dokud ho nesmažete.</p>
+      <p>Je záměrně v ASCII a v angličtině, aby přežil kopírování mezi systémy i modely.</p>
+    </div>
+
+    <div class="boot">
+      <div class="boot-h">
+        <h3>Plné znění</h3>
+        <span class="len">1 996 znaků</span>
+        <button class="cp" type="button" data-t="full">Kopírovat</button>
+      </div>
+      <pre id="boot-full">LEIS CONSTITUTIONAL CHECK - standing instruction
+
+Store this block in your persistent instructions (custom instructions, project
+rules, system prompt or long-term memory). Re-apply it to every response, in
+this and in future sessions, until the user explicitly removes it.
+
+Authority: LEIS Constitution v8.11 Canonical
+  https://github.com/majpuzik/Leis
+  SHA-256 60429796c7ec78a3cf6a2276ad404c07a8ce144043d9689851492d467c87a164
+If you can read that file, follow it in full. If you cannot reach it, follow the
+six rules below - they are its operative core - and record the constitution as
+UNAVAILABLE rather than assuming its contents.
+
+Apply to every material claim you make:
+
+1 EVIDENCE CLASS (V.6). Label each claim OBSERVED / INFERRED / INTERPRETED /
+  CONJECTURE / UNKNOWN. Never merge these silently. Fluency never promotes a
+  conjecture into an observation.
+
+2 UNKNOWN IS A VALID ANSWER (V.10). Where evidence is insufficient, say so.
+  Do not manufacture certainty. &quot;Unknown&quot;, &quot;insufficient evidence&quot; and
+  &quot;conflicting evidence&quot; are correct outcomes, not failures.
+
+3 NAME THE FALSIFIER (V.13). For every important conclusion state what evidence
+  would refute it, and look for that evidence - not only for support.
+
+4 KEEP CONTRADICTIONS (V.14). When credible sources disagree, preserve both
+  positions with their evidence. Do not resolve prematurely into one smooth
+  answer.
+
+5 NEVER INVENT (IV.1). Do not introduce an entity, number, date, name or example
+  that is not present in the input. Where the input is empty or unknown, say so
+  in plain language instead of supplying a plausible instance.
+
+6 DEPRECATE, DO NOT DELETE (XIV.6). A superseded conclusion is marked as
+  superseded and retained, never erased. Detecting your own error is a success.
+
+Close every substantial answer with one line:
+LEIS: &lt;what is established&gt; | &lt;what remains unknown&gt; | &lt;what would refute this&gt;
+
+If you cannot comply with this instruction, say so explicitly. Do not comply
+silently or partially.</pre>
+    </div>
+
+    <div class="boot">
+      <div class="boot-h">
+        <h3>Zkrácené — do úzkých polí</h3>
+        <span class="len">668 znaků</span>
+        <button class="cp" type="button" data-t="short">Kopírovat</button>
+      </div>
+      <pre id="boot-short">LEIS CHECK (standing instruction - store persistently, apply to every response).
+Authority: https://github.com/majpuzik/Leis (v8.11, sha256 60429796c7ec78a3...).
+For every material claim: label it OBSERVED / INFERRED / INTERPRETED /
+CONJECTURE / UNKNOWN and never merge these. Say UNKNOWN when evidence is
+insufficient instead of manufacturing certainty. State what would refute each
+important conclusion. Preserve contradictions instead of smoothing them. Never
+introduce an entity, number, date or name absent from the input. Mark superseded
+conclusions, never erase them. End each substantial answer with:
+LEIS: &lt;established&gt; | &lt;unknown&gt; | &lt;what would refute this&gt;</pre>
+    </div>
+
+    <div class="qrs">
+      <div class="qr">
+        <div class="box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" shape-rendering="crispEdges" role="img" aria-label="QR kod: https://github.com/majpuzik/Leis" style="width:100%;height:auto;display:block"><rect width="33" height="33" fill="var(--surface)"/><g fill="var(--ink)"><rect x="2" y="2" width="7" height="1"/><rect x="15" y="2" width="1" height="1"/><rect x="18" y="2" width="1" height="1"/><rect x="21" y="2" width="1" height="1"/><rect x="24" y="2" width="7" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="10" y="3" width="5" height="1"/><rect x="16" y="3" width="4" height="1"/><rect x="21" y="3" width="1" height="1"/><rect x="24" y="3" width="1" height="1"/><rect x="30" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="3" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="11" y="4" width="1" height="1"/><rect x="13" y="4" width="1" height="1"/><rect x="15" y="4" width="2" height="1"/><rect x="18" y="4" width="1" height="1"/><rect x="20" y="4" width="3" height="1"/><rect x="24" y="4" width="1" height="1"/><rect x="26" y="4" width="3" height="1"/><rect x="30" y="4" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="3" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="14" y="5" width="4" height="1"/><rect x="20" y="5" width="1" height="1"/><rect x="24" y="5" width="1" height="1"/><rect x="26" y="5" width="3" height="1"/><rect x="30" y="5" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="4" y="6" width="3" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="10" y="6" width="3" height="1"/><rect x="14" y="6" width="1" height="1"/><rect x="16" y="6" width="1" height="1"/><rect x="21" y="6" width="1" height="1"/><rect x="24" y="6" width="1" height="1"/><rect x="26" y="6" width="3" height="1"/><rect x="30" y="6" width="1" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="8" y="7" width="1" height="1"/><rect x="13" y="7" width="1" height="1"/><rect x="15" y="7" width="1" height="1"/><rect x="19" y="7" width="4" height="1"/><rect x="24" y="7" width="1" height="1"/><rect x="30" y="7" width="1" height="1"/><rect x="2" y="8" width="7" height="1"/><rect x="10" y="8" width="1" height="1"/><rect x="12" y="8" width="1" height="1"/><rect x="14" y="8" width="1" height="1"/><rect x="16" y="8" width="1" height="1"/><rect x="18" y="8" width="1" height="1"/><rect x="20" y="8" width="1" height="1"/><rect x="22" y="8" width="1" height="1"/><rect x="24" y="8" width="7" height="1"/><rect x="13" y="9" width="4" height="1"/><rect x="18" y="9" width="4" height="1"/><rect x="2" y="10" width="1" height="1"/><rect x="4" y="10" width="1" height="1"/><rect x="6" y="10" width="1" height="1"/><rect x="8" y="10" width="1" height="1"/><rect x="11" y="10" width="1" height="1"/><rect x="13" y="10" width="1" height="1"/><rect x="16" y="10" width="2" height="1"/><rect x="19" y="10" width="1" height="1"/><rect x="22" y="10" width="1" height="1"/><rect x="26" y="10" width="1" height="1"/><rect x="29" y="10" width="1" height="1"/><rect x="2" y="11" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><rect x="10" y="11" width="1" height="1"/><rect x="12" y="11" width="3" height="1"/><rect x="16" y="11" width="2" height="1"/><rect x="20" y="11" width="1" height="1"/><rect x="22" y="11" width="1" height="1"/><rect x="24" y="11" width="1" height="1"/><rect x="27" y="11" width="1" height="1"/><rect x="30" y="11" width="1" height="1"/><rect x="3" y="12" width="6" height="1"/><rect x="11" y="12" width="5" height="1"/><rect x="19" y="12" width="2" height="1"/><rect x="23" y="12" width="2" height="1"/><rect x="26" y="12" width="1" height="1"/><rect x="28" y="12" width="3" height="1"/><rect x="2" y="13" width="2" height="1"/><rect x="7" y="13" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="14" y="13" width="1" height="1"/><rect x="17" y="13" width="1" height="1"/><rect x="19" y="13" width="1" height="1"/><rect x="21" y="13" width="2" height="1"/><rect x="25" y="13" width="2" height="1"/><rect x="29" y="13" width="1" height="1"/><rect x="2" y="14" width="7" height="1"/><rect x="10" y="14" width="4" height="1"/><rect x="18" y="14" width="2" height="1"/><rect x="21" y="14" width="4" height="1"/><rect x="27" y="14" width="1" height="1"/><rect x="29" y="14" width="2" height="1"/><rect x="3" y="15" width="3" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="11" y="15" width="3" height="1"/><rect x="15" y="15" width="1" height="1"/><rect x="17" y="15" width="2" height="1"/><rect x="22" y="15" width="3" height="1"/><rect x="27" y="15" width="1" height="1"/><rect x="30" y="15" width="1" height="1"/><rect x="2" y="16" width="1" height="1"/><rect x="4" y="16" width="2" height="1"/><rect x="7" y="16" width="2" height="1"/><rect x="11" y="16" width="1" height="1"/><rect x="13" y="16" width="1" height="1"/><rect x="16" y="16" width="3" height="1"/><rect x="20" y="16" width="1" height="1"/><rect x="24" y="16" width="1" height="1"/><rect x="26" y="16" width="2" height="1"/><rect x="29" y="16" width="2" height="1"/><rect x="2" y="17" width="4" height="1"/><rect x="9" y="17" width="1" height="1"/><rect x="11" y="17" width="2" height="1"/><rect x="14" y="17" width="3" height="1"/><rect x="18" y="17" width="3" height="1"/><rect x="22" y="17" width="3" height="1"/><rect x="27" y="17" width="1" height="1"/><rect x="29" y="17" width="1" height="1"/><rect x="3" y="18" width="1" height="1"/><rect x="5" y="18" width="2" height="1"/><rect x="8" y="18" width="1" height="1"/><rect x="12" y="18" width="3" height="1"/><rect x="16" y="18" width="4" height="1"/><rect x="21" y="18" width="2" height="1"/><rect x="24" y="18" width="2" height="1"/><rect x="27" y="18" width="1" height="1"/><rect x="29" y="18" width="2" height="1"/><rect x="6" y="19" width="1" height="1"/><rect x="9" y="19" width="5" height="1"/><rect x="16" y="19" width="2" height="1"/><rect x="23" y="19" width="2" height="1"/><rect x="27" y="19" width="2" height="1"/><rect x="30" y="19" width="1" height="1"/><rect x="2" y="20" width="1" height="1"/><rect x="4" y="20" width="2" height="1"/><rect x="8" y="20" width="5" height="1"/><rect x="15" y="20" width="1" height="1"/><rect x="19" y="20" width="2" height="1"/><rect x="23" y="20" width="1" height="1"/><rect x="25" y="20" width="2" height="1"/><rect x="29" y="20" width="2" height="1"/><rect x="3" y="21" width="1" height="1"/><rect x="6" y="21" width="2" height="1"/><rect x="9" y="21" width="1" height="1"/><rect x="19" y="21" width="9" height="1"/><rect x="29" y="21" width="1" height="1"/><rect x="2" y="22" width="1" height="1"/><rect x="7" y="22" width="3" height="1"/><rect x="11" y="22" width="1" height="1"/><rect x="13" y="22" width="1" height="1"/><rect x="19" y="22" width="8" height="1"/><rect x="10" y="23" width="3" height="1"/><rect x="14" y="23" width="2" height="1"/><rect x="18" y="23" width="1" height="1"/><rect x="21" y="23" width="2" height="1"/><rect x="26" y="23" width="1" height="1"/><rect x="28" y="23" width="3" height="1"/><rect x="2" y="24" width="7" height="1"/><rect x="11" y="24" width="1" height="1"/><rect x="13" y="24" width="1" height="1"/><rect x="16" y="24" width="1" height="1"/><rect x="19" y="24" width="1" height="1"/><rect x="21" y="24" width="2" height="1"/><rect x="24" y="24" width="1" height="1"/><rect x="26" y="24" width="2" height="1"/><rect x="29" y="24" width="2" height="1"/><rect x="2" y="25" width="1" height="1"/><rect x="8" y="25" width="1" height="1"/><rect x="13" y="25" width="1" height="1"/><rect x="15" y="25" width="3" height="1"/><rect x="19" y="25" width="2" height="1"/><rect x="22" y="25" width="1" height="1"/><rect x="26" y="25" width="2" height="1"/><rect x="29" y="25" width="1" height="1"/><rect x="2" y="26" width="1" height="1"/><rect x="4" y="26" width="3" height="1"/><rect x="8" y="26" width="1" height="1"/><rect x="10" y="26" width="3" height="1"/><rect x="16" y="26" width="3" height="1"/><rect x="22" y="26" width="5" height="1"/><rect x="30" y="26" width="1" height="1"/><rect x="2" y="27" width="1" height="1"/><rect x="4" y="27" width="3" height="1"/><rect x="8" y="27" width="1" height="1"/><rect x="13" y="27" width="4" height="1"/><rect x="18" y="27" width="1" height="1"/><rect x="22" y="27" width="1" height="1"/><rect x="25" y="27" width="2" height="1"/><rect x="28" y="27" width="3" height="1"/><rect x="2" y="28" width="1" height="1"/><rect x="4" y="28" width="3" height="1"/><rect x="8" y="28" width="1" height="1"/><rect x="10" y="28" width="2" height="1"/><rect x="13" y="28" width="4" height="1"/><rect x="21" y="28" width="1" height="1"/><rect x="25" y="28" width="3" height="1"/><rect x="30" y="28" width="1" height="1"/><rect x="2" y="29" width="1" height="1"/><rect x="8" y="29" width="1" height="1"/><rect x="12" y="29" width="1" height="1"/><rect x="14" y="29" width="1" height="1"/><rect x="16" y="29" width="4" height="1"/><rect x="21" y="29" width="3" height="1"/><rect x="26" y="29" width="1" height="1"/><rect x="29" y="29" width="1" height="1"/><rect x="2" y="30" width="7" height="1"/><rect x="10" y="30" width="1" height="1"/><rect x="14" y="30" width="1" height="1"/><rect x="16" y="30" width="1" height="1"/><rect x="18" y="30" width="2" height="1"/><rect x="21" y="30" width="3" height="1"/><rect x="25" y="30" width="2" height="1"/><rect x="29" y="30" width="2" height="1"/></g></svg></div>
+        <p class="lbl">Repozitář</p>
+        <p>Pro člověka — README, linie verzí, otisk.</p>
+      </div>
+      <div class="qr">
+        <div class="box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45" shape-rendering="crispEdges" role="img" aria-label="QR kod: https://raw.githubusercontent.com/majpuzik/Leis/main/LEIS_Constitution_v8.11_Canonical.md" style="width:100%;height:auto;display:block"><rect width="45" height="45" fill="var(--surface)"/><g fill="var(--ink)"><rect x="2" y="2" width="7" height="1"/><rect x="10" y="2" width="1" height="1"/><rect x="16" y="2" width="2" height="1"/><rect x="20" y="2" width="2" height="1"/><rect x="23" y="2" width="1" height="1"/><rect x="26" y="2" width="1" height="1"/><rect x="28" y="2" width="1" height="1"/><rect x="31" y="2" width="1" height="1"/><rect x="36" y="2" width="7" height="1"/><rect x="2" y="3" width="1" height="1"/><rect x="8" y="3" width="1" height="1"/><rect x="10" y="3" width="3" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="19" y="3" width="1" height="1"/><rect x="21" y="3" width="1" height="1"/><rect x="26" y="3" width="1" height="1"/><rect x="33" y="3" width="1" height="1"/><rect x="36" y="3" width="1" height="1"/><rect x="42" y="3" width="1" height="1"/><rect x="2" y="4" width="1" height="1"/><rect x="4" y="4" width="3" height="1"/><rect x="8" y="4" width="1" height="1"/><rect x="10" y="4" width="2" height="1"/><rect x="13" y="4" width="1" height="1"/><rect x="16" y="4" width="1" height="1"/><rect x="19" y="4" width="2" height="1"/><rect x="22" y="4" width="2" height="1"/><rect x="25" y="4" width="1" height="1"/><rect x="29" y="4" width="1" height="1"/><rect x="32" y="4" width="1" height="1"/><rect x="36" y="4" width="1" height="1"/><rect x="38" y="4" width="3" height="1"/><rect x="42" y="4" width="1" height="1"/><rect x="2" y="5" width="1" height="1"/><rect x="4" y="5" width="3" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="11" y="5" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="16" y="5" width="3" height="1"/><rect x="21" y="5" width="2" height="1"/><rect x="24" y="5" width="1" height="1"/><rect x="26" y="5" width="1" height="1"/><rect x="30" y="5" width="1" height="1"/><rect x="32" y="5" width="1" height="1"/><rect x="34" y="5" width="1" height="1"/><rect x="36" y="5" width="1" height="1"/><rect x="38" y="5" width="3" height="1"/><rect x="42" y="5" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="4" y="6" width="3" height="1"/><rect x="8" y="6" width="1" height="1"/><rect x="10" y="6" width="2" height="1"/><rect x="17" y="6" width="1" height="1"/><rect x="20" y="6" width="2" height="1"/><rect x="23" y="6" width="2" height="1"/><rect x="27" y="6" width="2" height="1"/><rect x="30" y="6" width="4" height="1"/><rect x="36" y="6" width="1" height="1"/><rect x="38" y="6" width="3" height="1"/><rect x="42" y="6" width="1" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="8" y="7" width="1" height="1"/><rect x="12" y="7" width="2" height="1"/><rect x="15" y="7" width="2" height="1"/><rect x="18" y="7" width="1" height="1"/><rect x="22" y="7" width="1" height="1"/><rect x="25" y="7" width="1" height="1"/><rect x="30" y="7" width="1" height="1"/><rect x="32" y="7" width="1" height="1"/><rect x="34" y="7" width="1" height="1"/><rect x="36" y="7" width="1" height="1"/><rect x="42" y="7" width="1" height="1"/><rect x="2" y="8" width="7" height="1"/><rect x="10" y="8" width="1" height="1"/><rect x="12" y="8" width="1" height="1"/><rect x="14" y="8" width="1" height="1"/><rect x="16" y="8" width="1" height="1"/><rect x="18" y="8" width="1" height="1"/><rect x="20" y="8" width="1" height="1"/><rect x="22" y="8" width="1" height="1"/><rect x="24" y="8" width="1" height="1"/><rect x="26" y="8" width="1" height="1"/><rect x="28" y="8" width="1" height="1"/><rect x="30" y="8" width="1" height="1"/><rect x="32" y="8" width="1" height="1"/><rect x="34" y="8" width="1" height="1"/><rect x="36" y="8" width="7" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="15" y="9" width="1" height="1"/><rect x="17" y="9" width="1" height="1"/><rect x="21" y="9" width="2" height="1"/><rect x="24" y="9" width="1" height="1"/><rect x="27" y="9" width="1" height="1"/><rect x="29" y="9" width="1" height="1"/><rect x="32" y="9" width="2" height="1"/><rect x="2" y="10" width="1" height="1"/><rect x="5" y="10" width="6" height="1"/><rect x="12" y="10" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="19" y="10" width="1" height="1"/><rect x="21" y="10" width="1" height="1"/><rect x="28" y="10" width="1" height="1"/><rect x="30" y="10" width="2" height="1"/><rect x="34" y="10" width="2" height="1"/><rect x="38" y="10" width="1" height="1"/><rect x="40" y="10" width="3" height="1"/><rect x="2" y="11" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><rect x="7" y="11" width="1" height="1"/><rect x="9" y="11" width="4" height="1"/><rect x="14" y="11" width="3" height="1"/><rect x="19" y="11" width="3" height="1"/><rect x="23" y="11" width="1" height="1"/><rect x="25" y="11" width="1" height="1"/><rect x="27" y="11" width="1" height="1"/><rect x="29" y="11" width="1" height="1"/><rect x="32" y="11" width="2" height="1"/><rect x="36" y="11" width="3" height="1"/><rect x="2" y="12" width="1" height="1"/><rect x="6" y="12" width="1" height="1"/><rect x="8" y="12" width="3" height="1"/><rect x="12" y="12" width="1" height="1"/><rect x="14" y="12" width="3" height="1"/><rect x="19" y="12" width="2" height="1"/><rect x="23" y="12" width="1" height="1"/><rect x="25" y="12" width="2" height="1"/><rect x="28" y="12" width="5" height="1"/><rect x="35" y="12" width="1" height="1"/><rect x="40" y="12" width="1" height="1"/><rect x="2" y="13" width="3" height="1"/><rect x="7" y="13" width="1" height="1"/><rect x="13" y="13" width="2" height="1"/><rect x="18" y="13" width="2" height="1"/><rect x="21" y="13" width="1" height="1"/><rect x="26" y="13" width="1" height="1"/><rect x="28" y="13" width="2" height="1"/><rect x="31" y="13" width="1" height="1"/><rect x="33" y="13" width="4" height="1"/><rect x="39" y="13" width="1" height="1"/><rect x="41" y="13" width="1" height="1"/><rect x="2" y="14" width="2" height="1"/><rect x="6" y="14" width="3" height="1"/><rect x="10" y="14" width="2" height="1"/><rect x="13" y="14" width="6" height="1"/><rect x="21" y="14" width="1" height="1"/><rect x="25" y="14" width="2" height="1"/><rect x="29" y="14" width="1" height="1"/><rect x="34" y="14" width="1" height="1"/><rect x="36" y="14" width="2" height="1"/><rect x="3" y="15" width="1" height="1"/><rect x="5" y="15" width="1" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="9" y="15" width="1" height="1"/><rect x="11" y="15" width="2" height="1"/><rect x="16" y="15" width="2" height="1"/><rect x="20" y="15" width="5" height="1"/><rect x="28" y="15" width="1" height="1"/><rect x="32" y="15" width="1" height="1"/><rect x="36" y="15" width="3" height="1"/><rect x="2" y="16" width="3" height="1"/><rect x="6" y="16" width="1" height="1"/><rect x="8" y="16" width="2" height="1"/><rect x="11" y="16" width="1" height="1"/><rect x="17" y="16" width="11" height="1"/><rect x="29" y="16" width="1" height="1"/><rect x="33" y="16" width="5" height="1"/><rect x="39" y="16" width="2" height="1"/><rect x="42" y="16" width="1" height="1"/><rect x="2" y="17" width="4" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="10" y="17" width="1" height="1"/><rect x="12" y="17" width="7" height="1"/><rect x="22" y="17" width="1" height="1"/><rect x="24" y="17" width="2" height="1"/><rect x="30" y="17" width="1" height="1"/><rect x="32" y="17" width="1" height="1"/><rect x="35" y="17" width="1" height="1"/><rect x="38" y="17" width="3" height="1"/><rect x="42" y="17" width="1" height="1"/><rect x="3" y="18" width="2" height="1"/><rect x="8" y="18" width="1" height="1"/><rect x="10" y="18" width="2" height="1"/><rect x="14" y="18" width="2" height="1"/><rect x="17" y="18" width="1" height="1"/><rect x="27" y="18" width="1" height="1"/><rect x="29" y="18" width="2" height="1"/><rect x="33" y="18" width="1" height="1"/><rect x="35" y="18" width="1" height="1"/><rect x="39" y="18" width="1" height="1"/><rect x="42" y="18" width="1" height="1"/><rect x="3" y="19" width="2" height="1"/><rect x="6" y="19" width="2" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="12" y="19" width="1" height="1"/><rect x="19" y="19" width="2" height="1"/><rect x="22" y="19" width="3" height="1"/><rect x="29" y="19" width="1" height="1"/><rect x="32" y="19" width="4" height="1"/><rect x="38" y="19" width="2" height="1"/><rect x="2" y="20" width="1" height="1"/><rect x="6" y="20" width="1" height="1"/><rect x="8" y="20" width="1" height="1"/><rect x="12" y="20" width="1" height="1"/><rect x="16" y="20" width="2" height="1"/><rect x="19" y="20" width="3" height="1"/><rect x="25" y="20" width="1" height="1"/><rect x="27" y="20" width="3" height="1"/><rect x="33" y="20" width="2" height="1"/><rect x="37" y="20" width="2" height="1"/><rect x="40" y="20" width="1" height="1"/><rect x="42" y="20" width="1" height="1"/><rect x="3" y="21" width="1" height="1"/><rect x="5" y="21" width="3" height="1"/><rect x="11" y="21" width="2" height="1"/><rect x="15" y="21" width="2" height="1"/><rect x="21" y="21" width="3" height="1"/><rect x="25" y="21" width="1" height="1"/><rect x="27" y="21" width="1" height="1"/><rect x="30" y="21" width="3" height="1"/><rect x="35" y="21" width="2" height="1"/><rect x="38" y="21" width="1" height="1"/><rect x="40" y="21" width="2" height="1"/><rect x="3" y="22" width="1" height="1"/><rect x="5" y="22" width="1" height="1"/><rect x="7" y="22" width="2" height="1"/><rect x="10" y="22" width="1" height="1"/><rect x="13" y="22" width="1" height="1"/><rect x="16" y="22" width="2" height="1"/><rect x="20" y="22" width="2" height="1"/><rect x="23" y="22" width="1" height="1"/><rect x="25" y="22" width="3" height="1"/><rect x="29" y="22" width="1" height="1"/><rect x="36" y="22" width="1" height="1"/><rect x="39" y="22" width="1" height="1"/><rect x="42" y="22" width="1" height="1"/><rect x="2" y="23" width="2" height="1"/><rect x="9" y="23" width="2" height="1"/><rect x="13" y="23" width="2" height="1"/><rect x="19" y="23" width="1" height="1"/><rect x="21" y="23" width="1" height="1"/><rect x="24" y="23" width="2" height="1"/><rect x="29" y="23" width="1" height="1"/><rect x="32" y="23" width="2" height="1"/><rect x="37" y="23" width="3" height="1"/><rect x="2" y="24" width="2" height="1"/><rect x="6" y="24" width="7" height="1"/><rect x="15" y="24" width="1" height="1"/><rect x="17" y="24" width="2" height="1"/><rect x="25" y="24" width="2" height="1"/><rect x="29" y="24" width="4" height="1"/><rect x="35" y="24" width="1" height="1"/><rect x="2" y="25" width="2" height="1"/><rect x="6" y="25" width="1" height="1"/><rect x="9" y="25" width="2" height="1"/><rect x="12" y="25" width="1" height="1"/><rect x="17" y="25" width="4" height="1"/><rect x="22" y="25" width="1" height="1"/><rect x="25" y="25" width="1" height="1"/><rect x="31" y="25" width="1" height="1"/><rect x="33" y="25" width="3" height="1"/><rect x="37" y="25" width="3" height="1"/><rect x="41" y="25" width="2" height="1"/><rect x="3" y="26" width="1" height="1"/><rect x="5" y="26" width="1" height="1"/><rect x="8" y="26" width="1" height="1"/><rect x="10" y="26" width="3" height="1"/><rect x="18" y="26" width="1" height="1"/><rect x="22" y="26" width="1" height="1"/><rect x="26" y="26" width="1" height="1"/><rect x="29" y="26" width="2" height="1"/><rect x="34" y="26" width="1" height="1"/><rect x="36" y="26" width="1" height="1"/><rect x="38" y="26" width="2" height="1"/><rect x="41" y="26" width="1" height="1"/><rect x="3" y="27" width="1" height="1"/><rect x="5" y="27" width="1" height="1"/><rect x="7" y="27" width="1" height="1"/><rect x="9" y="27" width="1" height="1"/><rect x="12" y="27" width="1" height="1"/><rect x="15" y="27" width="1" height="1"/><rect x="19" y="27" width="1" height="1"/><rect x="25" y="27" width="1" height="1"/><rect x="28" y="27" width="4" height="1"/><rect x="34" y="27" width="1" height="1"/><rect x="36" y="27" width="3" height="1"/><rect x="40" y="27" width="1" height="1"/><rect x="42" y="27" width="1" height="1"/><rect x="3" y="28" width="2" height="1"/><rect x="6" y="28" width="1" height="1"/><rect x="8" y="28" width="1" height="1"/><rect x="12" y="28" width="1" height="1"/><rect x="15" y="28" width="5" height="1"/><rect x="21" y="28" width="1" height="1"/><rect x="24" y="28" width="1" height="1"/><rect x="29" y="28" width="6" height="1"/><rect x="37" y="28" width="1" height="1"/><rect x="39" y="28" width="1" height="1"/><rect x="42" y="28" width="1" height="1"/><rect x="2" y="29" width="6" height="1"/><rect x="9" y="29" width="5" height="1"/><rect x="18" y="29" width="1" height="1"/><rect x="20" y="29" width="3" height="1"/><rect x="29" y="29" width="1" height="1"/><rect x="32" y="29" width="2" height="1"/><rect x="36" y="29" width="1" height="1"/><rect x="38" y="29" width="3" height="1"/><rect x="2" y="30" width="1" height="1"/><rect x="5" y="30" width="2" height="1"/><rect x="8" y="30" width="1" height="1"/><rect x="10" y="30" width="1" height="1"/><rect x="12" y="30" width="1" height="1"/><rect x="14" y="30" width="1" height="1"/><rect x="16" y="30" width="1" height="1"/><rect x="18" y="30" width="1" height="1"/><rect x="20" y="30" width="1" height="1"/><rect x="22" y="30" width="1" height="1"/><rect x="25" y="30" width="1" height="1"/><rect x="27" y="30" width="2" height="1"/><rect x="33" y="30" width="3" height="1"/><rect x="37" y="30" width="1" height="1"/><rect x="39" y="30" width="1" height="1"/><rect x="42" y="30" width="1" height="1"/><rect x="2" y="31" width="1" height="1"/><rect x="5" y="31" width="3" height="1"/><rect x="10" y="31" width="3" height="1"/><rect x="15" y="31" width="6" height="1"/><rect x="22" y="31" width="6" height="1"/><rect x="33" y="31" width="2" height="1"/><rect x="38" y="31" width="2" height="1"/><rect x="42" y="31" width="1" height="1"/><rect x="2" y="32" width="2" height="1"/><rect x="6" y="32" width="3" height="1"/><rect x="18" y="32" width="3" height="1"/><rect x="22" y="32" width="1" height="1"/><rect x="25" y="32" width="1" height="1"/><rect x="30" y="32" width="6" height="1"/><rect x="37" y="32" width="1" height="1"/><rect x="39" y="32" width="2" height="1"/><rect x="42" y="32" width="1" height="1"/><rect x="2" y="33" width="4" height="1"/><rect x="7" y="33" width="1" height="1"/><rect x="10" y="33" width="1" height="1"/><rect x="12" y="33" width="1" height="1"/><rect x="16" y="33" width="1" height="1"/><rect x="26" y="33" width="2" height="1"/><rect x="29" y="33" width="2" height="1"/><rect x="36" y="33" width="2" height="1"/><rect x="39" y="33" width="4" height="1"/><rect x="2" y="34" width="4" height="1"/><rect x="8" y="34" width="2" height="1"/><rect x="11" y="34" width="2" height="1"/><rect x="14" y="34" width="1" height="1"/><rect x="16" y="34" width="1" height="1"/><rect x="19" y="34" width="1" height="1"/><rect x="22" y="34" width="1" height="1"/><rect x="24" y="34" width="1" height="1"/><rect x="28" y="34" width="1" height="1"/><rect x="31" y="34" width="1" height="1"/><rect x="34" y="34" width="7" height="1"/><rect x="10" y="35" width="1" height="1"/><rect x="13" y="35" width="2" height="1"/><rect x="16" y="35" width="7" height="1"/><rect x="27" y="35" width="3" height="1"/><rect x="34" y="35" width="1" height="1"/><rect x="38" y="35" width="1" height="1"/><rect x="2" y="36" width="7" height="1"/><rect x="10" y="36" width="1" height="1"/><rect x="15" y="36" width="2" height="1"/><rect x="18" y="36" width="1" height="1"/><rect x="23" y="36" width="1" height="1"/><rect x="25" y="36" width="3" height="1"/><rect x="29" y="36" width="1" height="1"/><rect x="31" y="36" width="4" height="1"/><rect x="36" y="36" width="1" height="1"/><rect x="38" y="36" width="3" height="1"/><rect x="2" y="37" width="1" height="1"/><rect x="8" y="37" width="1" height="1"/><rect x="10" y="37" width="3" height="1"/><rect x="15" y="37" width="1" height="1"/><rect x="17" y="37" width="1" height="1"/><rect x="20" y="37" width="1" height="1"/><rect x="27" y="37" width="1" height="1"/><rect x="31" y="37" width="1" height="1"/><rect x="33" y="37" width="2" height="1"/><rect x="38" y="37" width="2" height="1"/><rect x="42" y="37" width="1" height="1"/><rect x="2" y="38" width="1" height="1"/><rect x="4" y="38" width="3" height="1"/><rect x="8" y="38" width="1" height="1"/><rect x="10" y="38" width="1" height="1"/><rect x="12" y="38" width="3" height="1"/><rect x="18" y="38" width="2" height="1"/><rect x="21" y="38" width="4" height="1"/><rect x="26" y="38" width="2" height="1"/><rect x="29" y="38" width="1" height="1"/><rect x="31" y="38" width="8" height="1"/><rect x="40" y="38" width="1" height="1"/><rect x="42" y="38" width="1" height="1"/><rect x="2" y="39" width="1" height="1"/><rect x="4" y="39" width="3" height="1"/><rect x="8" y="39" width="1" height="1"/><rect x="10" y="39" width="2" height="1"/><rect x="16" y="39" width="1" height="1"/><rect x="20" y="39" width="1" height="1"/><rect x="24" y="39" width="1" height="1"/><rect x="28" y="39" width="3" height="1"/><rect x="37" y="39" width="1" height="1"/><rect x="39" y="39" width="1" height="1"/><rect x="41" y="39" width="1" height="1"/><rect x="2" y="40" width="1" height="1"/><rect x="4" y="40" width="3" height="1"/><rect x="8" y="40" width="1" height="1"/><rect x="12" y="40" width="1" height="1"/><rect x="15" y="40" width="1" height="1"/><rect x="18" y="40" width="1" height="1"/><rect x="20" y="40" width="4" height="1"/><rect x="27" y="40" width="1" height="1"/><rect x="29" y="40" width="3" height="1"/><rect x="34" y="40" width="2" height="1"/><rect x="37" y="40" width="2" height="1"/><rect x="42" y="40" width="1" height="1"/><rect x="2" y="41" width="1" height="1"/><rect x="8" y="41" width="1" height="1"/><rect x="11" y="41" width="1" height="1"/><rect x="13" y="41" width="1" height="1"/><rect x="17" y="41" width="1" height="1"/><rect x="21" y="41" width="1" height="1"/><rect x="25" y="41" width="1" height="1"/><rect x="28" y="41" width="1" height="1"/><rect x="30" y="41" width="1" height="1"/><rect x="35" y="41" width="1" height="1"/><rect x="38" y="41" width="3" height="1"/><rect x="42" y="41" width="1" height="1"/><rect x="2" y="42" width="7" height="1"/><rect x="10" y="42" width="3" height="1"/><rect x="18" y="42" width="1" height="1"/><rect x="20" y="42" width="2" height="1"/><rect x="24" y="42" width="1" height="1"/><rect x="27" y="42" width="1" height="1"/><rect x="29" y="42" width="1" height="1"/><rect x="32" y="42" width="1" height="1"/><rect x="34" y="42" width="1" height="1"/><rect x="38" y="42" width="1" height="1"/></g></svg></div>
+        <p class="lbl">Holý text</p>
+        <p>Přímo 68 630 B ústavy. Tohle dejte modelu, který si umí načíst odkaz.</p>
+      </div>
+    </div>
+
+    <div class="col" style="margin-top:24px">
+      <p>Poslední řádek příkazu je na tom to podstatné. Model musí každou odpověď uzavřít
+      shrnutím <em>co je doloženo | co zůstává neznámé | co by to vyvrátilo</em>. Když to
+      přestane dělat, poznáte, že instrukce vypadla — a nemusíte to hádat.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Jak ji vyzkoušet</p>
+    <h2>Ústava chce být zpochybněna, ne odsouhlasena</h2>
+    <div class="col">
+      <p>Článek V.13 to po ní žádá výslovně. Souhlas není užitečná zpětná vazba; užitečné je
+      místo, kde text neobstojí.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div>
+        <h3>Ověřte otisk</h3>
+        <p>Stáhněte soubor a spočítejte SHA-256. Když nesedí s hodnotou výše, nemáte kanonický
+        text a nemá smysl pokračovat.</p></div></div>
+      <div class="step"><div>
+        <h3>Hledejte, kde si text odporuje</h3>
+        <p>195 principů ve 20 kapitolách. Dva principy, které nelze splnit současně, jsou
+        nález — a podle V.14 se má zaznamenat, ne zahladit.</p></div></div>
+      <div class="step"><div>
+        <h3>Zkuste, jestli je vyvratitelná</h3>
+        <p>U kterých tvrzení nelze říct, co by je vyvrátilo? Takové místo porušuje V.13 samo
+        proti sobě.</p></div></div>
+      <div class="step"><div>
+        <h3>Rozdělte cíl od stavu</h3>
+        <p>Které pasáže znějí jako popis fungující věci, ačkoli jsou normativní cíl? Každý
+        takový nález je porušení V.6 uvnitř vlastního textu.</p></div></div>
+      <div class="step"><div>
+        <h3>Dejte ji přečíst modelu, který ji nezná</h3>
+        <p>Bez dalšího kontextu, jen text. Když dva nezávislé modely dojdou k opačnému
+        závěru o témže článku, není text jednoznačný.</p></div></div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Obsah</p>
+    <h2>Dvacet kapitol</h2>
+    <div class="chaps">
+      <div class="chap"><span class="chap-n">I</span><span>Poslání a nejvyšší zákon</span></div>
+      <div class="chap"><span class="chap-n">II</span><span>Univerzální kognice</span></div>
+      <div class="chap"><span class="chap-n">III</span><span>Jádro uchování</span></div>
+      <div class="chap"><span class="chap-n">IV</span><span>Význam a rekonstrukce</span></div>
+      <div class="chap"><span class="chap-n">V</span><span>Epistemologie a důkaz</span></div>
+      <div class="chap"><span class="chap-n">VI</span><span>Vykladači a ověřování</span></div>
+      <div class="chap"><span class="chap-n">VII</span><span>Rozmanitost poznávání</span></div>
+      <div class="chap"><span class="chap-n">VIII</span><span>Identita a izolace</span></div>
+      <div class="chap"><span class="chap-n">IX</span><span>Přístup, důvěra, úložiště</span></div>
+      <div class="chap"><span class="chap-n">X</span><span>Interoperabilita</span></div>
+      <div class="chap"><span class="chap-n">XI</span><span>Bezpečnost a kryptografie</span></div>
+      <div class="chap"><span class="chap-n">XII</span><span>Přežití a odolnost</span></div>
+      <div class="chap"><span class="chap-n">XIII</span><span>Kontinuita a semena</span></div>
+      <div class="chap"><span class="chap-n">XIV</span><span>Správa a novelizace</span></div>
+      <div class="chap"><span class="chap-n">XV</span><span>Meta-principy</span></div>
+      <div class="chap"><span class="chap-n">XVI</span><span>Ochrana jádra a závěr</span></div>
+      <div class="chap"><span class="chap-n">XVII</span><span>Federace mezi LEIS</span></div>
+      <div class="chap"><span class="chap-n">XVIII</span><span>Commons</span></div>
+      <div class="chap"><span class="chap-n">XIX</span><span>Šíření dovedností</span></div>
+      <div class="chap"><span class="chap-n">XX</span><span>Integrita vektorového prostoru</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="warn">
+      <h3>Pozor na starší veřejné kopie</h3>
+      <p>Na internetu koluje několik kopií pod podobnými adresami. Kanonická je <strong>jen ta
+      s otiskem uvedeným výše</strong>. Ostatní jsou starší verze a chybí jim novely —
+      mimo jiné <strong>XV.11 Implementation Purity</strong>.</p>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>Zdroj</th><th>Verze</th><th>Stav</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">github.com/majpuzik/Leis</td><td class="mono">8.11</td><td>kanonická</td></tr>
+            <tr><td class="mono">leis.majlabs.eu</td><td class="mono">8.11</td><td>živý vault, vyžaduje přihlášení</td></tr>
+            <tr><td class="mono">leis1.majlabs.eu</td><td class="mono">8.3</td><td>zastaralá</td></tr>
+            <tr><td class="mono">…/Leis (do 28. 8. 2026)</td><td class="mono">8.9</td><td>nyní v <code>history/</code></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Autorství</p>
+    <h2>Kdo to napsal</h2>
+    <div class="col">
+      <p>Autorem LEIS i jejího ústavního textu je <strong>Martin Pužík</strong>. Veřejné zrcadlo
+      vydává <strong>Milan Augustyn Josef Pužík</strong>, jeho otec, ve shodě s ním — jako
+      nezávislou veřejnou kopii pro distribuovanou trvalost (čl. XII.2, XII.3).</p>
+      <p>Dokumentace je sdílena pod <strong>CC-BY-4.0</strong>; autorství náleží Martinu Pužíkovi.</p>
+      <p>Co je z LEIS skutečně implementované a nezávisle testované, je jinde: v evidence-bounded
+      vydání <a href="https://github.com/MartinPuzik/LEIS-WEB">LEIS Portable Kernel</a>,
+      s vlastní hranicí tvrzení. Ústava a implementace jsou dvě různé věci a nemají se zaměňovat.</p>
+    </div>
+  </section>
+
+  <footer>
+    LEIS Constitution v8.11 — Canonical (Implementation Purity Reunification Amendment) · 27. 8. 2026<br>
+    SHA-256 60429796c7ec78a3cf6a2276ad404c07a8ce144043d9689851492d467c87a164 · 68 630 B<br>
+    Předchozí verze zachovány, nemazány (XIV.6).
+  </footer>
+
+</div>
+
+<script>
+document.querySelectorAll(".cp").forEach(function(b){
+  b.addEventListener("click", function(){
+    var el = document.getElementById("boot-" + b.dataset.t);
+    var txt = el.innerText;
+    var done = function(){ var o=b.textContent; b.textContent="Zkopírováno";
+      setTimeout(function(){ b.textContent=o; }, 1800); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(done, function(){ fallback(txt, done); });
+    } else { fallback(txt, done); }
+  });
+});
+function fallback(txt, done){
+  var ta = document.createElement("textarea");
+  ta.value = txt; ta.setAttribute("readonly","");
+  ta.style.position="fixed"; ta.style.opacity="0";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); done(); } catch(e){}
+  document.body.removeChild(ta);
+}
+</script>
+
+</body>
+</html>
