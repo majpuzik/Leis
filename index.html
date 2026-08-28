@@ -366,54 +366,75 @@ LEIS: &lt;established&gt; | &lt;unknown&gt; | &lt;what would refute this&gt;</pr
   </section>
 
 
+
   <section>
     <p class="kicker">Kam to vložit</p>
-    <h2>Aby si to nástroj pamatoval i zítra</h2>
+    <h2>Jedno pravidlo místo seznamu, který stárne</h2>
     <div class="col">
-      <p>Vložení do jednoho chatu vydrží jen do konce sezení. Tohle jsou místa, odkud si to
-      nástroj přikládá <strong>sám ke každé odpovědi</strong>, dokud to nesmažete.</p>
+      <p>Výčet nástrojů zastará dřív, než ho dopíšete. Obecné pravidlo ale platí u všech:</p>
+      <blockquote style="margin:0 0 20px;font-size:1.06rem">Najděte pole, jehož obsah si nástroj
+      přikládá ke <strong>každé</strong> konverzaci — jmenuje se vlastní pokyny, osobní pokyny,
+      instrukce projektu, systémový prompt, uložené informace nebo paměť. Vložte příkaz tam.
+      Když takové pole není, vložte ho jako první zprávu; pak platí do konce sezení.</blockquote>
+      <p>Ověření je stejné všude a nepotřebujete k němu vědět, jak se to v daném nástroji jmenuje:
+      <strong>každá odpověď musí končit řádkem</strong> <em>co je doloženo | co zůstává neznámé |
+      co by to vyvrátilo</em>. Když ten řádek chodí, chytlo se to. Když zmizí, vypadlo to.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Pro nástroje pracující s kódem</p>
+    <h2>Jeden soubor, přes třicet nástrojů</h2>
+    <div class="col">
+      <p>Tady společný standard opravdu existuje. <strong><code>AGENTS.md</code></strong> v kořeni
+      repozitáře čte přes třicet agentů — mimo jiné Codex, GitHub Copilot, Cursor, Gemini CLI,
+      Jules, Aider, Zed, Windsurf a Devin. Vznikl v OpenAI, dnes ho spravuje Agentic AI Foundation
+      pod Linux Foundation a k polovině roku 2026 ho používá přes 60 000 repozitářů.</p>
+      <p>Stačí tedy do <code>AGENTS.md</code> vložit příkaz a čte ho každý z nich. Claude Code ho
+      rovněž čte, i když má vlastní bohatší <code>CLAUDE.md</code>. Ukázku najdete přímo
+      <a href="https://github.com/majpuzik/Leis/blob/main/AGENTS.md">v tomto repozitáři</a>.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kicker">Konkrétní místa</p>
+    <h2>Kde to hledat v tom, co lidé používají nejčastěji</h2>
+    <div class="col">
+      <p>Není to úplný seznam a být nemůže. Je to jen zkratka, ať nemusíte hledat.</p>
     </div>
     <div class="kam">
       <div class="nastroj">
-        <h3>GitHub Copilot — osobní</h3>
-        <p class="kde">github.com/copilot → profilový obrázek vlevo dole → Personal instructions</p>
-        <p>Vložit, uložit. Platí pro každou konverzaci na GitHubu a má ze všech nastavení
-        nejvyšší přednost.</p>
-      </div>
-      <div class="nastroj">
-        <h3>GitHub Copilot — pro repozitář</h3>
-        <p class="kde">.github/copilot-instructions.md</p>
-        <p>Soubor v repozitáři. Copilot ho čte při každém dotazu v jeho kontextu — hodí se,
-        když má pravidlo platit pro celý tým.</p>
+        <h3>GitHub Copilot</h3>
+        <p class="kde">github.com/copilot → profil vlevo dole → Personal instructions</p>
+        <p>Platí pro každou konverzaci a má nejvyšší přednost. Pro celý tým místo toho
+        <code>.github/copilot-instructions.md</code>.</p>
       </div>
       <div class="nastroj">
         <h3>ChatGPT</h3>
         <p class="kde">Nastavení → Personalizace → Vlastní pokyny</p>
-        <p>Do pole „Jak má ChatGPT odpovídat". Delší verze se nemusí vejít — pak použijte
-        tu zkrácenou.</p>
+        <p>Do pole „Jak má ChatGPT odpovídat". Delší verze se nemusí vejít — pak zkrácená.</p>
       </div>
       <div class="nastroj">
         <h3>Claude</h3>
         <p class="kde">Projekt → Instrukce projektu · nebo Nastavení → Osobní preference</p>
-        <p>Instrukce projektu platí pro všechny konverzace v něm. V Claude Code stačí
-        soubor <code>CLAUDE.md</code> v adresáři.</p>
+        <p>V Claude Code stačí <code>CLAUDE.md</code> nebo <code>AGENTS.md</code> v adresáři.</p>
       </div>
       <div class="nastroj">
         <h3>Gemini</h3>
-        <p class="kde">Nastavení → Uložené informace</p>
-        <p>Uloží se jako trvalý kontext, který si model bere ke každé odpovědi.</p>
+        <p class="kde">Nastavení → Uložené informace · CLI: GEMINI.md</p>
+        <p>Uloží se jako trvalý kontext ke každé odpovědi.</p>
       </div>
       <div class="nastroj">
-        <h3>Kdekoli jinde</h3>
-        <p class="kde">první zpráva v konverzaci</p>
-        <p>Když nástroj trvalé pokyny nemá, vložte příkaz jako úplně první zprávu. Platí
-        pak do konce toho sezení.</p>
+        <h3>Copilot v Microsoftu 365</h3>
+        <p class="kde">agent → Instrukce</p>
+        <p>Osobní pole napříč aplikacemi zatím nemá; použijte vlastního agenta, nebo vložte
+        příkaz jako první zprávu.</p>
       </div>
-    </div>
-    <div class="col" style="margin-top:22px">
-      <p>Že se to chytilo, poznáte podle posledního řádku odpovědi — musí končit shrnutím
-      <em>co je doloženo | co zůstává neznámé | co by to vyvrátilo</em>. Když ten řádek
-      zmizí, instrukce vypadla.</p>
+      <div class="nastroj">
+        <h3>Cokoli dalšího</h3>
+        <p class="kde">viz obecné pravidlo výše</p>
+        <p>Hledejte pole, které přežije konec konverzace. Existuje-li, je to ono.</p>
+      </div>
     </div>
   </section>
 
