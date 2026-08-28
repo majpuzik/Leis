@@ -40,6 +40,46 @@ se (XIV.6). Dřívější veřejné kopie tohoto zrcadla nesly v8.9; ten soubor 
 
 ---
 
+## Standing instruction — make an AI keep checking / Trvalý příkaz
+
+Reading the Constitution once is not enough: a model forgets it when the session ends.
+`LEIS-CHECK.txt` is a self-contained block meant to be pasted into an AI's **persistent
+instructions** — custom instructions, project rules, system prompt or long-term memory.
+The model then re-applies it to every answer until it is removed.
+
+*Přečíst Ústavu jednou nestačí — model ji zapomene s koncem sezení. `LEIS-CHECK.txt` se
+vkládá do trvalých instrukcí AI a ta si ho pak přikládá ke každé odpovědi sama.*
+
+| File | Size | Use |
+|---|---|---|
+| [`LEIS-CHECK.txt`](LEIS-CHECK.txt) | 1,996 chars | full text, for normal instruction fields |
+| [`LEIS-CHECK-short.txt`](LEIS-CHECK-short.txt) | 668 chars | for tight fields |
+
+It is deliberately **ASCII-only and in English** so it survives copy and paste between
+systems, editors and models. It carries six operative rules of the Constitution — evidence
+class (**V.6**), *unknown* as a valid answer (**V.10**), a named falsifier (**V.13**),
+preserved contradiction (**V.14**), no invention (**IV.1**), deprecate rather than delete
+(**XIV.6**) — plus this repository's URL and hash, so a model that can fetch links reads the
+canonical text itself.
+
+The instruction ends each substantial answer with one line:
+
+```
+LEIS: <what is established> | <what remains unknown> | <what would refute this>
+```
+
+That line doubles as a **tell-tale**: when it stops appearing, the instruction has fallen out
+of the model's context and you know it without having to guess.
+
+### QR
+
+| | Target |
+|---|---|
+| [`qr/qr-repository.svg`](qr/qr-repository.svg) | this repository — for a human reader |
+| [`qr/qr-constitution-raw.svg`](qr/qr-constitution-raw.svg) | the raw constitution file — for a model that fetches links |
+
+---
+
 ## What this document is — and is not (claims boundary) / Co tento dokument je a co není
 
 The LEIS Constitution is a **normative constitution of principles**, written with the conventions **MUST / SHOULD / MAY**. It describes how a preservation-and-cognition system *ought* to behave.
